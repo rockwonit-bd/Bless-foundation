@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLESS FOUNDATION</title>
     <link rel="stylesheet" href="css/volunteer.css">
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </head>
 <body>
 <header>
@@ -178,7 +179,10 @@
                 <label for="identity_bd">Valid Identity(NID/Driving License/Passport)*</label>
                 <input type="file" id="identity_bd" name="identity" accept="image/*" required>
             </div>
+            <div class="captcha_and_submit_container">
+            <div class="h-captcha" data-sitekey="0842fe52-8432-4b56-a5a8-d6fa32c811c0"></div>
             <input type="submit" value="SUBMIT">
+            </div>
         </form>
     </div>
 
@@ -434,7 +438,10 @@
                 <label for="hobbies_int">Interest/Hobbies(Max 100 words)*</label>
                 <textarea id="hobbies_int" name="hobbies" maxlength="100" required></textarea>
             </div>
+            <div class="captcha_and_submit_container">
+            <div class="h-captcha" data-sitekey="0842fe52-8432-4b56-a5a8-d6fa32c811c0"></div>
             <input type="submit" value="SUBMIT">
+            </div>
         </form>
     </div>
 </main>
