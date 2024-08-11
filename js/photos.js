@@ -1,83 +1,63 @@
-/*const galleryImages = document.querySelectorAll('.gallery-img');
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modal-img');
-const closeBtn = document.querySelector('.close');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-
-let currentImageIndex;
-
-galleryImages.forEach((img, index) => {
-    img.addEventListener('click', () => {
-        openModal();
-        modalImg.src = img.src;
-        currentImageIndex = index;
-    });
-});
-
-closeBtn.addEventListener('click', closeModal);
-prevBtn.addEventListener('click', showPrevImage);
-nextBtn.addEventListener('click', showNextImage);
-
-function openModal() {
-    modal.style.display = 'flex';
-}
-
-function closeModal() {
-    modal.style.display = 'none';
-}
-
-function showPrevImage() {
-    currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : galleryImages.length - 1;
-    modalImg.src = galleryImages[currentImageIndex].src;
-}
-
-function showNextImage() {
-    currentImageIndex = (currentImageIndex < galleryImages.length - 1) ? currentImageIndex + 1 : 0;
-    modalImg.src = galleryImages[currentImageIndex].src;
-}
-
-window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        closeModal();
-    }
-});*/
-
 document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".container__img-holder img");
+    const photoContainer = document.getElementById("photo-container");
     const popup = document.querySelector(".img-popup");
     const popupImage = popup.querySelector("img");
     const closeButton = popup.querySelector(".close-btn");
     const navLeft = popup.querySelector(".nav-left");
     const navRight = popup.querySelector(".nav-right");
     let currentIndex;
+    let photos = [];
+
+    // Fetch photos from the server
+    fetch('photo_operations.php')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                photos = data.photos;
+                renderPhotos();
+            } else {
+                console.error('Error fetching photos:', data.error);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+
+    function renderPhotos() {
+        photoContainer.innerHTML = '';
+        photos.forEach((photo, index) => {
+            const imgHolder = document.createElement('div');
+            imgHolder.className = 'container__img-holder';
+            imgHolder.innerHTML = `<img src="${photo.file_path}" alt="${photo.caption || 'Image'}" data-index="${index}">`;
+            photoContainer.appendChild(imgHolder);
+        });
+
+        // Add click event listeners to the newly created images
+        const images = document.querySelectorAll(".container__img-holder img");
+        images.forEach(img => {
+            img.addEventListener("click", () => openPopup(parseInt(img.dataset.index)));
+        });
+    }
 
     function openPopup(index) {
         currentIndex = index;
-        const imageSrc = images[currentIndex].getAttribute("src");
-        popupImage.setAttribute("src", imageSrc);
+        const photo = photos[currentIndex];
+        popupImage.src = photo.file_path;
+        popupImage.alt = photo.caption || 'Image';
         popup.classList.add("opened");
-        popupImage.classList.add("opened");
     }
 
     function closePopup() {
         popup.classList.remove("opened");
-        popupImage.classList.remove("opened");
     }
 
     function showNextImage() {
-        currentIndex = (currentIndex + 1) % images.length;
+        currentIndex = (currentIndex + 1) % photos.length;
         openPopup(currentIndex);
     }
 
     function showPrevImage() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        currentIndex = (currentIndex - 1 + photos.length) % photos.length;
         openPopup(currentIndex);
     }
-
-    images.forEach((img, index) => {
-        img.addEventListener("click", () => openPopup(index));
-    });
 
     closeButton.addEventListener("click", closePopup);
     popup.addEventListener("click", (e) => {

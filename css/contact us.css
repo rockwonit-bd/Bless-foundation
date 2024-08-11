@@ -240,6 +240,25 @@ nav ul li a:hover {
     background-color: #e65c50;
 }
 
+#formMessage {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block;
+}
+
 /* Engage Box Styles */
 .engage-box {
     background-color: #101526;

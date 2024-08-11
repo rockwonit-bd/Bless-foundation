@@ -29,10 +29,6 @@ body {
 }
 
 /* Header styles */
-header {
-   /* background-color: #1F1F1F*/;
-}
-
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -53,7 +49,6 @@ header {
 .social-media-links .icons {
     width: 24px;
     height: 24px;
-    /*filter: invert(100%);*/
 }
 
 .header-middle {
@@ -78,9 +73,6 @@ header {
     font-weight: bold;
     color: #F6A723;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-    /*background: linear-gradient(to right, darkblue, darkorchid);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;*/
 
 }
 
@@ -188,21 +180,18 @@ main {
     display: flex;
     justify-content: flex-start;
     width: 63rem;
-    /*margin-left: 1rem;*/
 }
 .mission-statement h2 {
     font-size: 2rem;
     color: #F6A723;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
     margin-bottom: 1rem;
-    /*text-align: center;*/
 }
 
 .mission-statement p {
     font-size: 1rem;
     color: #BDBDBD;
     margin-bottom: 2rem;
-    /*text-align: center;*/
 }
 
 .slider-and-news{
@@ -265,15 +254,12 @@ main {
 /*In the News*/
 .news-container{
     margin-right: 2.8rem;
-    /*margin-bottom: 0.6rem;*/
 }
 .news-header {
     color: white;
     background-color: #444;
     padding: 10px;
-    /*   margin-top: 20px; */
     border-radius: 5px 5px 0 0;
-    /*border-image: linear-gradient(to right, darkblue, darkorchid) 1;*/
     outline: 1px solid #707070;
     width: 360px;
     text-align: center;
@@ -286,7 +272,6 @@ main {
     background-color: #0F1629;
     color: #fff;
     border-radius: 0 0 5px 5px;
-    /*border-image: linear-gradient(to right, darkblue, darkorchid) 1;*/
     outline: 1px solid #707070;
     position: relative;
 }
@@ -318,46 +303,30 @@ main {
     margin-bottom: 1rem;
 }
 
-.testimonials1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.testimonials2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 2rem;
+.testimonials-grid{
+    padding: 10px;
+    margin: 20px auto 0;
+    text-align: center;
 }
 
 .testimonial {
     background-color: #101526;
     box-shadow: 2px 5px 5px rgba(70, 70, 70, 0.6), 0 0 20px rgba(79, 79, 79, 0.5);
-    /*border: thick solid;
-    border-image: linear-gradient(to right, darkblue, darkorchid) 1;*/
-    margin: 1rem;
-    padding: 1rem;
+    padding-top: 0.8rem;
     border-radius: 5px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 20rem;
+    display: inline-block;
+    margin: 1rem 1rem 16px 16px;
 }
 
-/*.testimonial:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}*/
-
-.testimonial p {
-    font-size: 1rem;
-    color: #BDBDBD;
-    margin-bottom: 1rem;
+.testimonial img{
+max-width: 92%;
 }
 
-.testimonial span {
-    font-size: 1rem;
-    color: #F6A723;
+.description{
+    margin: 0.8rem;
 }
 
 /* Footer styles */
@@ -410,7 +379,6 @@ footer {
 .social-media-footer .icons {
     width: 24px;
     height: 24px;
-    /*filter: invert(100%);*/
 }
 
 /* Apply scaling for screen sizes larger than 1920px */
@@ -481,9 +449,6 @@ footer {
         width: 243.8vw;
         height: 100vh;
     }
-    /*footer{
-        margin-top: 64.6vh;
-    }*/
 }
 
 /* Scaling for 480x800 screens (large mobile devices) */
@@ -494,9 +459,6 @@ footer {
         width: 385.8vw;
         height: 100vh;
     }
-    /*footer{
-        margin-top: 81.4rem;
-    }*/
 }
 
 /* Scaling for 412x732 screens (smaller mobile devices) */
@@ -507,9 +469,6 @@ footer {
         width: 385.8vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 9.4rem;
-    }*/
 }
 
 /* Scaling for 414x896 screens (smaller mobile devices) */
@@ -520,9 +479,6 @@ footer {
         width: 385.8vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 42rem;
-    }*/
 }
 
 /* Scaling for 375x667 screens (smaller mobile devices) */
@@ -533,9 +489,6 @@ footer {
         width: 385.8vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 0;
-    }*/
 }
 
 /* Scaling for 375x812 screens (smaller mobile devices) */
@@ -546,9 +499,6 @@ footer {
         width: 385.8vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 16rem;
-    }*/
 }
 
 /* Scaling for 390x844 screens (smaller mobile devices) */
@@ -559,9 +509,6 @@ footer {
         width: 385.8vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 29.6rem;
-    }*/
 }
 
 /* Scaling for smaller mobile devices */

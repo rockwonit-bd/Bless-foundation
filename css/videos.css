@@ -29,10 +29,6 @@ body {
 }
 
 /* Header styles */
-header {
-    /* background-color: #1F1F1F*/;
-}
-
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -53,7 +49,6 @@ header {
 .social-media-links .icons {
     width: 24px;
     height: 24px;
-    /*filter: invert(100%);*/
 }
 
 .header-middle {
@@ -78,9 +73,6 @@ header {
     font-weight: bold;
     color: #F6A723;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-    /*background: linear-gradient(to right, darkblue, darkorchid);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;*/
 
 }
 
@@ -184,18 +176,18 @@ main {
 }
 
 /* Videos styles */
-
-.row1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.videos-grid{
+    padding: 10px;
+    margin: 20px auto 0;
+    text-align: center;
 }
 
-.row2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 2rem;
+.video-container{
+    max-width: 420px;
+    display: inline-block;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    cursor: pointer;
 }
 
 /* Footer styles */
@@ -248,76 +240,31 @@ footer {
 .social-media-footer .icons {
     width: 24px;
     height: 24px;
-    /*filter: invert(100%);*/
-}
-
-/* Apply scaling for screen sizes larger than 1920px */
-@media (min-width: 1921px) {
-    body {
-        transform: scale(1.25);
-        transform-origin: top left;
-        width: 80vw;
-        height: 100vh;
-    }
 }
 
 /* Scaling for 4K screens */
 @media (min-width: 3840px) {
     body {
-        transform: scale(2.49);
+        transform: scale(2.5);
         transform-origin: top left;
         width: 40vw;
         height: 100vh;
     }
 }
 
-/* Scaling for 1440x900 screens */
-@media (max-width: 1440px) {
-    body {
-        transform: scale(0.749);
-        transform-origin: top left;
-        width: 132.8vw;
-        height: 100vh;
-    }
-}
-
-/* Scaling for 1366x768 screens */
-@media (device-width: 1366px) {
-    body {
-        transform: scale(0.711);
-        transform-origin: top left;
-        width: 139.8vw;
-        height: 100vh;
-    }
-}
-
-/* Scaling for 1280x720 screens */
-@media (max-width: 1280px) {
-    body {
-        transform: scale(0.659);
-        transform-origin: top left;
-        width: 150.8vw;
-        height: 100vh;
-    }
-}
-
-/* Scaling for 1024x768 screens */
-@media (max-width: 1024px) {
-    body {
-        transform: scale(0.53);
-        transform-origin: top left;
-        width: 187.6vw;
-        height: 100vh;
-    }
-}
-
 /* Scaling for 768x1024 screens (portrait tablets) */
-@media (max-width: 768px) {
-    body {
-        transform: scale(0.4);
-        transform-origin: top left;
-        width: 248.6vw;
-        height: 100vh;
+@media (device-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-left: 0;
+    }
+
+    .social-media-links {
+        margin-top: 1rem;
     }
 }
 
@@ -329,9 +276,6 @@ footer {
         width: 398vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 26.2rem;
-    }*/
 }
 
 /* Scaling for 412x732 screens (smaller mobile devices) */
@@ -342,9 +286,6 @@ footer {
         width: 382vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 9.4rem;
-    }*/
 }
 
 /* Scaling for 414x896 screens (smaller mobile devices) */
@@ -355,9 +296,6 @@ footer {
         width: 382.8vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 42rem;
-    }*/
 }
 
 /* Scaling for 375x667 screens (smaller mobile devices) */
@@ -368,9 +306,6 @@ footer {
         width: 383.4vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 0;
-    }*/
 }
 
 /* Scaling for 375x812 screens (smaller mobile devices) */
@@ -381,9 +316,6 @@ footer {
         width: 384.4vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 16rem;
-    }*/
 }
 
 /* Scaling for 390x844 screens (smaller mobile devices) */
@@ -394,9 +326,6 @@ footer {
         width: 382.8vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 29.6rem;
-    }*/
 }
 
 /* Scaling for smaller mobile devices */
@@ -407,7 +336,4 @@ footer {
         width: 584vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 28rem;
-    }*/
 }

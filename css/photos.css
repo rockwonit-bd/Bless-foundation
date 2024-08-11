@@ -29,10 +29,6 @@ body {
 }
 
 /* Header styles */
-header {
-    /* background-color: #1F1F1F*/;
-}
-
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -53,7 +49,6 @@ header {
 .social-media-links .icons {
     width: 24px;
     height: 24px;
-    /*filter: invert(100%);*/
 }
 
 .header-middle {
@@ -78,10 +73,6 @@ header {
     font-weight: bold;
     color: #F6A723;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-    /*background: linear-gradient(to right, darkblue, darkorchid);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;*/
-
 }
 
 .years {
@@ -183,94 +174,6 @@ main {
     padding: 2rem 1rem;
 }
 
-/*Gallery*/
-/*.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 20px;
-    justify-content: space-evenly;
-}
-
-.gallery-item {
-    width: 320px;
-    height: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #101526;
-    position: relative;
-    overflow: hidden;
-}
-
-.gallery-img {
-    max-width: 100%;
-    max-height: 70%;
-    object-fit: contain;
-    display: block;
-    cursor: pointer;
-}
-
-.description {
-    text-align: center;
-    padding: 10px;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.9);
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-content {
-    max-width: 90%;
-    max-height: 80%;
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.modal-nav {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.prev, .next {
-    color: #fff;
-    font-size: 40px;
-    cursor: pointer;
-    user-select: none;
-}
-
-.prev{
-    margin-left: 140px;
-}
-
-.next{
-    margin-right: 140px;
-}*/
-
 /* Image gallery styling */
 .container {
     padding: 10px;
@@ -286,16 +189,11 @@ main {
     cursor: pointer;
 }
 
-/*.container .container__img-holder:nth-child(5n+1) {
-    margin-left: 0;
-}*/
-
 .container__img-holder img {
     width: 100%;
     height: 220px;
     display: block;
 }
-
 
 /* Popup Styling */
 .img-popup {
@@ -388,10 +286,8 @@ main {
 
 /* Footer styles */
 footer {
-    /*position: absolute;*/
     bottom: 0;
     width: 100%;
-    /*height: 160px;*/
     background-color: #343a40;
     color: #ffffff;
     text-align: center;
@@ -440,68 +336,7 @@ footer {
 .social-media-footer .icons {
     width: 24px;
     height: 24px;
-    /*filter: invert(100%);*/
 }
-
-/* Apply scaling for screen sizes larger than 1920px */
-/*@media (min-width: 1921px) {
-    body {
-        transform: scale(1.25);
-        transform-origin: top left;
-        width: 80vw;
-        height: 100vh;
-    }
-}
-
-!* Scaling for 4K screens *!
-@media (min-width: 3840px) {
-    body {
-        transform: scale(2.5);
-        transform-origin: top left;
-        width: 40vw;
-        height: 100vh;
-    }
-}
-
-!* Scaling for 1440x900 screens *!
-@media (max-width: 1440px) {
-    body {
-        transform: scale(0.75);
-        transform-origin: top left;
-        width: 132.8vw;
-        height: 100vh;
-    }
-}
-
-!* Scaling for 1366x768 screens *!
-@media (device-width: 1366px) {
-    body {
-        transform: scale(0.71);
-        transform-origin: top left;
-        width: 139.8vw;
-        height: 100vh;
-    }
-}
-
-!* Scaling for 1280x720 screens *!
-@media (max-width: 1280px) {
-    body {
-        transform: scale(0.66);
-        transform-origin: top left;
-        width: 150.6vw;
-        height: 100vh;
-    }
-}
-
-!* Scaling for 1024x768 screens *!
-@media (max-width: 1024px) {
-    body {
-        transform: scale(0.53);
-        transform-origin: top left;
-        width: 187.6vw;
-        height: 100vh;
-    }
-}*/
 
 /*Scaling for 4K screens*/
 @media (min-width: 3840px) {
@@ -544,86 +379,7 @@ footer {
     .footer-links {
         margin-left: 0;
     }
-
     .social-media-links {
         margin-top: 1rem;
     }
-}
-
-/* Scaling for 412x732 screens (smaller mobile devices) */
-@media (device-width: 412px) {
-    /*body {
-        transform: scale(0.26);
-        transform-origin: top left;
-        width: 382vw;
-        height: 100vh;
-    }*/
-    /*footer {
-        margin-top: 9.4rem;
-    }*/
-}
-
-/* Scaling for 414x896 screens (smaller mobile devices) */
-@media (device-width: 414px) {
-    /*body {
-        transform: scale(0.2596);
-        transform-origin: top left;
-        width: 382.8vw;
-        height: 100vh;
-    }*/
-    /*footer {
-        margin-top: 42rem;
-    }*/
-}
-
-/* Scaling for 375x667 screens (smaller mobile devices) */
-@media (device-width: 375px) and (device-height: 667px){
-   /* body {
-        transform: scale(0.259);
-        transform-origin: top left;
-        width: 383.4vw;
-        height: 100vh;
-    }*/
-    /*footer {
-        margin-top: 0;
-    }*/
-}
-
-/* Scaling for 375x812 screens (smaller mobile devices) */
-@media (device-width: 375px) and (device-height: 812px){
-    /*body {
-        transform: scale(0.259);
-        transform-origin: top left;
-        width: 384.4vw;
-        height: 100vh;
-    }*/
-    /*footer {
-        margin-top: 16rem;
-    }*/
-}
-
-/* Scaling for 390x844 screens (smaller mobile devices) */
-@media (device-width: 390px) {
-    /*body {
-        transform: scale(0.26);
-        transform-origin: top left;
-        width: 382.8vw;
-        height: 100vh;
-    }*/
-    /*footer {
-        margin-top: 29.6rem;
-    }*/
-}
-
-/* Scaling for smaller mobile devices */
-@media (max-width: 320px) {
-    /*body {
-        transform: scale(0.17);
-        transform-origin: top left;
-        width: 584vw;
-        height: 100vh;
-    }*/
-    /*footer {
-        margin-top: 28rem;
-    }*/
 }

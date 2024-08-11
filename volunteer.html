@@ -66,7 +66,7 @@
 <main>
     <div class="form-container">
         <h2>Bangladeshi Member/Volunteer</h2>
-        <form action="/submit_bangladeshi_volunteer" method="POST" enctype="multipart/form-data">
+        <form id="volunteerFormBn" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="first_name_bd">First Name*</label>
                 <input type="text" id="first_name_bd" name="first_name" required>
@@ -76,12 +76,14 @@
                 <input type="text" id="last_name_bd" name="last_name" required>
             </div>
             <div class="form-group">
-                <label for="email_bd" class="form-label">E-mail*</label>
-                <input type="email" id="email_bd" name="email" class="form-input" pattern="^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|outlook\.com|hotmail\.com)$" title="Only popular email services (gmail, yahoo, outlook, hotmail) are allowed." required>
+                <label for="email" class="form-label">E-mail*</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+                <span id="emailError" class="error-message"></span>
             </div>
             <div class="form-group">
-                <label for="phone_bd" class="form-label">Phone/Cell Number*</label>
-                <input type="tel" id="phone_bd" name="phone" class="form-control" pattern="(\+8801[3-9]\d{8}|01[3-9]\d{8})" title="Phone number should start with +8801 or 01 and be followed by 9 digits." required>
+                <label for="phone">Phone/Cell Number*</label>
+                <input type="tel" id="phone" name="phone" required>
+                <span id="phoneError" class="error-message"></span>
             </div>
             <div class="form-group">
                 <label for="gender_bd">Gender*</label>
@@ -116,7 +118,7 @@
                     <option value="chandpur">Chandpur</option>
                     <option value="chattogram">Chattogram</option>
                     <option value="chuadanga">Chuadanga</option>
-                    <option value="coxsbazar">Cox's Bazar</option>
+                    <option value="Cox's Bazar">Cox's Bazar</option>
                     <option value="cumilla">Cumilla</option>
                     <option value="dhaka">Dhaka</option>
                     <option value="dinajpur">Dinajpur</option>
@@ -180,15 +182,16 @@
                 <input type="file" id="identity_bd" name="identity" accept="image/*" required>
             </div>
             <div class="captcha_and_submit_container">
-            <div class="h-captcha" data-sitekey=""></div>
+            <div class="h-captcha" data-sitekey="0842fe52-8432-4b56-a5a8-d6fa32c811c0" data-theme="dark"></div>
             <input type="submit" value="SUBMIT">
             </div>
         </form>
+        <div id="formMessage"></div>
     </div>
 
     <div class="form-container international">
         <h2>International Member/Volunteer</h2>
-        <form action="/submit_international_volunteer" method="POST" enctype="multipart/form-data">
+        <form id="volunteerFormIn">
             <div class="form-group">
                 <label for="first_name_int">First Name*</label>
                 <input type="text" id="first_name_int" name="first_name" required>
@@ -198,12 +201,15 @@
                 <input type="text" id="last_name_int" name="last_name" required>
             </div>
             <div class="form-group">
-                <label for="email_int">E-mail*</label>
-                <input type="email" id="email_int" name="email" required>
+                E-mail*
+                <input type="email" id="emailIn" name="email" required>
+                <span id="emailErrorIn" class="error-message"></span>
             </div>
+
             <div class="form-group">
-                <label for="phone_int">Phone/Cell Number*</label>
-                <input type="tel" id="phone_int" name="phone" required>
+                Phone/Cell Number*
+                <input type="tel" id="phoneIn" name="phone" required>
+                <span id="phoneErrorIn" class="error-message"></span>
             </div>
             <div class="form-group">
                 <label for="gender_int">Gender*</label>
@@ -232,7 +238,6 @@
                     <option value="azerbaijan">Azerbaijan</option>
                     <option value="bahamas">Bahamas</option>
                     <option value="bahrain">Bahrain</option>
-                    <option value="bangladesh">Bangladesh</option>
                     <option value="barbados">Barbados</option>
                     <option value="belarus">Belarus</option>
                     <option value="belgium">Belgium</option>
@@ -439,10 +444,11 @@
                 <textarea id="hobbies_int" name="hobbies" maxlength="100" required></textarea>
             </div>
             <div class="captcha_and_submit_container">
-            <div class="h-captcha" data-sitekey=""></div>
+            <div class="h-captcha" data-sitekey="0842fe52-8432-4b56-a5a8-d6fa32c811c0" data-theme="dark"></div>
             <input type="submit" value="SUBMIT">
             </div>
         </form>
+        <div id="formMessageIn"></div>
     </div>
 </main>
 

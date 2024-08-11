@@ -248,6 +248,23 @@ input[type="submit"]:hover {
     background-color: #e65c50;
 }
 
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block;
+}
+
 /* Footer styles */
 footer {
     background-color: #343a40;
