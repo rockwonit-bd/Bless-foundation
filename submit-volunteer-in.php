@@ -19,7 +19,7 @@ try {
     }
 
     // Verify hCaptcha
-    $secret = 'ES_ca7602515451434fb7b1da278eb5bf1e';
+    $secret = '';
     $verifyResponse = file_get_contents('https://hcaptcha.com/siteverify?secret='.$secret.'&response='.$_POST['h-captcha-response']);
     $responseData = json_decode($verifyResponse);
 
