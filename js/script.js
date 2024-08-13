@@ -167,11 +167,44 @@ function applyLanguage(language) {
     descriptions.forEach(desc => {
         desc.innerHTML = desc.dataset[language];
     });
+    // Apply language to vision and mission
+    const visionContent = document.getElementById('vision-content');
+    const missionContent = document.getElementById('mission-content');
+    visionContent.innerHTML = visionContent.dataset[language];
+    missionContent.innerHTML = missionContent.dataset[language];
 }
 
 function getCurrentLanguage() {
     return localStorage.getItem('selectedLanguage') || 'en';
 }
 
-// Call this function when the page loads
-document.addEventListener('DOMContentLoaded', fetchAndDisplayMotivatingTales);
+//Vision Mission
+// Function to fetch and display vision and mission
+function fetchVisionMission() {
+    fetch('get_vision_mission.php')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const visionContent = document.getElementById('vision-content');
+                const missionContent = document.getElementById('mission-content');
+
+                // Store both language versions
+                visionContent.dataset.en = data.data.visionEn;
+                visionContent.dataset.bn = data.data.visionBn;
+                missionContent.dataset.en = data.data.missionEn;
+                missionContent.dataset.bn = data.data.missionBn;
+
+                // Apply current language
+                applyLanguage(getCurrentLanguage());
+            } else {
+                console.error('Failed to fetch vision and mission data');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+// Call fetchVisionMission when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    fetchAndDisplayMotivatingTales();
+    fetchVisionMission();
+});

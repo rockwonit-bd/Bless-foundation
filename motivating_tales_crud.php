@@ -17,9 +17,13 @@ try {
 
     function handleFileUpload($file) {
         $target_dir = "uploads/tales/";
-        $target_file = $target_dir . basename($file["name"]);
+        $imageFileType = strtolower(pathinfo($file["name"], PATHINFO_EXTENSION));
+
+        // Generate a unique filename
+        $unique_filename = uniqid() . '_' . bin2hex(random_bytes(8)) . '.' . $imageFileType;
+        $target_file = $target_dir . $unique_filename;
+
         $uploadOk = 1;
-        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
         // Check if image file is a actual image or fake image
         $check = getimagesize($file["tmp_name"]);

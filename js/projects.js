@@ -68,7 +68,7 @@ function renderProjects() {
         modal.innerHTML = `
             <div class="modal-content">
                 <span class="close" data-target="modal-${index + 1}">&times;</span>
-                <h2>${project['title_' + currentLanguage]}</h2>
+                <h2 style="margin-bottom: 8px">${project['title_' + currentLanguage]}</h2>
                 <div>${project['detailed_desc_' + currentLanguage]}</div>
             </div>
         `;
@@ -132,18 +132,3 @@ function updateOpenModals() {
         modal.querySelector('.modal-content > div').innerHTML = project['detailed_desc_' + currentLanguage];
     });
 }
-
-/*// Initial load
-document.addEventListener('DOMContentLoaded', () => {
-    fetchProjects();
-
-    // Language change listener
-    document.getElementById('languageSelect').addEventListener('change', function() {
-        const selectedLanguage = this.value;
-        localStorage.setItem('selectedLanguage', selectedLanguage);
-        changeProjectLanguage(selectedLanguage);
-    });
-
-    // Apply the saved language on load
-    changeProjectLanguage(currentLanguage);
-});*/

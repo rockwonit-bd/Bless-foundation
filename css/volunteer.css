@@ -29,10 +29,6 @@ body {
 }
 
 /* Header styles */
-header {
-    /* background-color: #1F1F1F*/;
-}
-
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -53,7 +49,6 @@ header {
 .social-media-links .icons {
     width: 24px;
     height: 24px;
-    /*filter: invert(100%);*/
 }
 
 .header-middle {
@@ -78,10 +73,6 @@ header {
     font-weight: bold;
     color: #F6A723;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-    /*background: linear-gradient(to right, darkblue, darkorchid);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;*/
-
 }
 
 .years {
@@ -188,7 +179,6 @@ main{
     margin-top: 4rem;
     margin-bottom: 4rem;
     width: 50%;
-    /*border: 1px solid #ccc;*/
     padding: 20px;
     border-radius: 5px;
     background-color: #101526;
@@ -315,7 +305,6 @@ footer {
 .social-media-footer .icons {
     width: 24px;
     height: 24px;
-    /*filter: invert(100%);*/
 }
 
 /* Apply scaling for screen sizes larger than 1920px */
@@ -386,9 +375,6 @@ footer {
         width: 240.8vw;
         height: 100vh;
     }
-    /*footer{
-        margin-top: 64.6vh;
-    }*/
 }
 
 /* Scaling for 480x800 screens (large mobile devices) */
@@ -399,9 +385,6 @@ footer {
         width: 385.8vw;
         height: 100vh;
     }
-    /*footer{
-        margin-top: 81.4rem;
-    }*/
 }
 
 /* Scaling for 412x732 screens (smaller mobile devices) */
@@ -442,9 +425,6 @@ footer {
         width: 385.8vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 0;
-    }*/
 }
 
 /* Scaling for 375x812 screens (smaller mobile devices) */

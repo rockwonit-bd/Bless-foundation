@@ -29,10 +29,6 @@ body {
 }
 
 /* Header styles */
-header {
-   /* background-color: #1F1F1F*/;
-}
-
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -53,7 +49,6 @@ header {
 .social-media-links .icons {
     width: 24px;
     height: 24px;
-    /*filter: invert(100%);*/
 }
 
 .header-middle {
@@ -78,10 +73,6 @@ header {
     font-weight: bold;
     color: #F6A723;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-    /*background: linear-gradient(to right, darkblue, darkorchid);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;*/
-
 }
 
 .years {
@@ -183,7 +174,6 @@ main {
     padding: 2rem 1rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .Info{
@@ -194,14 +184,12 @@ margin-left: 3rem;
 /*In the News*/
 .news-container{
     margin-right: 3rem;
-    margin-bottom: 86rem;
 }
 .news-header {
     color: white;
     background-color: #444;
     padding: 10px;
     border-radius: 5px 5px 0 0;
-    /*border-image: linear-gradient(to right, darkblue, darkorchid) 1;*/
     outline: 1px solid #707070;
     width: 360px;
     text-align: center;
@@ -214,7 +202,6 @@ margin-left: 3rem;
     background-color: #0F1629;
     color: #fff;
     border-radius: 0 0 5px 5px;
-    /*border-image: linear-gradient(to right, darkblue, darkorchid) 1;*/
     outline: 1px solid #707070;
     position: relative;
 }
@@ -322,7 +309,6 @@ footer {
 .social-media-footer .icons {
     width: 24px;
     height: 24px;
-    /*filter: invert(100%);*/
 }
 
 
@@ -404,9 +390,6 @@ footer {
         width: 399.2vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 26.2rem;
-    }*/
 }
 
 /* Scaling for 412x732 screens (smaller mobile devices) */
@@ -417,9 +400,6 @@ footer {
         width: 385.8vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 9.4rem;
-    }*/
 }
 
 /* Scaling for 414x896 screens (smaller mobile devices) */
@@ -430,9 +410,6 @@ footer {
         width: 385.8vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 42rem;
-    }*/
 }
 
 /* Scaling for 375x667 screens (smaller mobile devices) */
@@ -443,9 +420,6 @@ footer {
         width: 385.8vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 0;
-    }*/
 }
 
 /* Scaling for 375x812 screens (smaller mobile devices) */
@@ -456,9 +430,6 @@ footer {
         width: 385.8vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 16rem;
-    }*/
 }
 
 /* Scaling for 390x844 screens (smaller mobile devices) */
@@ -469,9 +440,6 @@ footer {
         width: 385.8vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 29.6rem;
-    }*/
 }
 
 /* Scaling for smaller mobile devices */
@@ -482,7 +450,4 @@ footer {
         width: 564.8vw;
         height: 100vh;
     }
-    /*footer {
-        margin-top: 28rem;
-    }*/
 }

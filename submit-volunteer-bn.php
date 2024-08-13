@@ -34,8 +34,11 @@ try {
 
     // File upload function
     function uploadFile($file, $uploadDir) {
-        $targetFile = $uploadDir . basename($file["name"]);
-        $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+        $imageFileType = strtolower(pathinfo($file["name"], PATHINFO_EXTENSION));
+
+        // Generate a unique filename
+        $uniqueName = uniqid() . '_' . bin2hex(random_bytes(8)) . '.' . $imageFileType;
+        $targetFile = $uploadDir . $uniqueName;
 
         // Check file size (2MB limit)
         if ($file["size"] > 2000000) {

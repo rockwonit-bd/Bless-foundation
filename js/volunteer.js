@@ -1,23 +1,7 @@
-/*
-    function onSubmit(token) {
-    alert('thanks ' + document.getElementById('field').value);
-}
-
-    function validate(event) {
-    event.preventDefault();
-
-    if (!document.getElementById('field').value) {
-    alert('You must add text to the required field');
-} else {
-    hcaptcha.execute();
-}
-}
-
-    function onLoad() {
-    var element = document.getElementById('submit');
-
-    element.onclick = validate;
-}*/
+document.addEventListener('DOMContentLoaded', function() {
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    document.getElementById('languageSelect').value = savedLanguage;
+});
 
 //Volunteer Bangladesh
 document.addEventListener('DOMContentLoaded', function() {
@@ -272,3 +256,5 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('volunteerFormIn element not found');
     }
 });
+
+

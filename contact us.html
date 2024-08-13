@@ -63,80 +63,54 @@
 </header>
 <section class="contact-container">
     <div class="office-address">
-        <h2>Office Address</h2>
-        <div id="OfficeAddress">
-        <p>221B Baker Street, London, England</p>
-        </div>
+        <h2 data-i18n="contact.officeAddress">Office Address</h2>
+        <p id="OfficeAddress">221B Baker Street, London, England</p>
         <div class="google-map">
-            <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4248513434086!2d-0.1585557!3d51.523767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761acf33628211%3A0x445d7677a88322e1!2s221B%20Baker%20St%2C%20London%20NW1%206XE%2C%20UK!5e0!3m2!1sen!2sbd!4v1719506271413!5m2!1sen!2sbd"
-                    width="600"
-                    height="400"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy">
-            </iframe>
         </div>
-        <div>
-        <h3>Sherlock Holmes</h3>
-        <p>Detective</p>
-        <p>12346243678</p>
-        <p>sherlock@gmail.com</p>
-        </div>
-        <div>
-        <h3>Dr. John H. Watson</h3>
-        <p>Doctor</p>
-        <p>04346243678</p>
-        <p>watson@gmail.com</p>
-        </div>
-        <div>
-        <h3>Inspector Lestrade</h3>
-        <p>Inspector</p>
-        <p>0135468579</p>
-        <p>lestrade@gmail.com</p>
+        <div id="ngo-member-info">
         </div>
     </div>
     <div class="write-to-us">
-        <h2>Write to Us</h2>
+        <h2 data-i18n="contact.writeToUs">Write to Us</h2>
         <form id="contactForm">
             <div class="form-group">
-                <label for="name">Name:</label>
+                <label for="name" data-i18n="contact.name">Name:</label>
                 <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
-                <label for="organization">Organization (Optional):</label>
+                <label for="organization" data-i18n="contact.organization">Organization (Optional):</label>
                 <input type="text" id="organization" name="organization">
             </div>
             <div class="form-group">
-                <label for="phone">Phone (Optional):</label>
+                <label for="phone" data-i18n="contact.phone">Phone (Optional):</label>
                 <input type="tel" id="phone" name="phone">
             </div>
             <div class="form-group">
-                <label for="email">E-mail (Required):</label>
+                <label for="email" data-i18n="contact.email">E-mail (Required):</label>
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="message">Message (max 250 words):</label>
+                <label for="message" data-i18n="contact.message">Message (max 250 words):</label>
                 <textarea id="message" name="message" maxlength="1000" required></textarea>
             </div>
-            <button type="submit" class="submit">SEND</button>
+            <button type="submit" class="submit" data-i18n="contact.send">SEND</button>
         </form>
         <div id="formMessage"></div>
     </div>
 </section>
 <section style="display: flex; justify-content: center">
     <div class="engage-box">
-        <h2>Engage With Us</h2>
+        <h2 data-i18n="engage.h2">Engage With Us</h2>
         <div class="engage-buttons">
-            <a href="volunteer.html" class="engage-btn">Become a Volunteer</a>
-            <a class="engage-btn">Patronize Us</a>
+            <a href="volunteer.html" class="engage-btn" data-i18n="engage.volunteer">Become a Volunteer</a>
+            <a class="engage-btn" data-i18n="engage.patronize">Patronize Us</a>
         </div>
     </div>
 </section>
 <footer>
     <div class="footer-content">
         <div class="footer-logo">
-            <img src="img/logo.jpg" alt="Logo">
+            <img src="" alt="Logo" id="bottom-logo">
         </div>
         <div class="footer-links">
             <a href="index.html" data-i18n="footer.home">Home</a>
@@ -159,6 +133,6 @@
 </footer>
 <script src="js/common.js"></script>
 <script src="js/translate.js"></script>
-<script src="js/contact-form.js"></script>
+<script src="js/contact-us.js"></script>
 </body>
 </html>

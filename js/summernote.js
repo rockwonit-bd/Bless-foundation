@@ -13,14 +13,13 @@ function initializeSummernote() {
     $('#visionEn, #visionBn, #missionEn, #missionBn').summernote({
         height: 200,
         toolbar: [
-            ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear', 'strikethrough']],
+            ['view', ['fullscreen', 'help']],
+            ['font', ['bold', 'italic','underline', 'clear', 'strikethrough']],
             ['fontsize', ['fontsize']],
             ['height', ['height']],
             ['color', ['color']],
             ['para', ['paragraph']],
-            ['insert', ['link']],
-            ['view', ['fullscreen', 'help']]
+            ['insert', ['link']]
         ]
     });
 }
@@ -131,15 +130,14 @@ function initializeTaleSummernote() {
     $('#taleDescriptionEn, #taleDescriptionBn').summernote({
         height: 200,
         toolbar: [
-            ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear', 'strikethrough']],
+            ['view', ['fullscreen', 'help']],
+            ['font', ['bold', 'italic', 'underline', 'clear', 'strikethrough']],
             ['fontsize', ['fontsize']],
             ['height', ['height']],
             ['color', ['color']],
             ['para', ['paragraph']],
             ['table', ['table']],
-            ['insert', ['link']],
-            ['view', ['fullscreen', 'help']]
+            ['insert', ['link']]
         ]
     });
 }
@@ -291,15 +289,14 @@ function initializeAboutUsSummernote() {
     $('#aboutUsEnglish, #aboutUsBangla').summernote({
         height: 300,
         toolbar: [
-            ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear', 'strikethrough']],
+            ['view', ['fullscreen', 'help']],
+            ['font', ['bold', 'italic', 'underline', 'clear', 'strikethrough']],
             ['fontsize', ['fontsize']],
             ['height', ['height']],
             ['color', ['color']],
             ['para', ['paragraph']],
             ['table', ['table']],
-            ['insert', ['link', 'picture']],
-            ['view', ['fullscreen', 'help']]
+            ['insert', ['link', 'picture']]
         ]
     });
 
@@ -372,15 +369,14 @@ function initializeProjectSummernote() {
         $(`#${id}`).summernote({
             height: id.includes('detailed') ? 300 : 150,
             toolbar: [
-                ['style', ['style']],
-                ['font', ['bold', 'underline', 'clear', 'strikethrough']],
+                ['view', ['fullscreen', 'help']],
+                ['font', ['bold', 'italic', 'underline', 'clear', 'strikethrough']],
                 ['fontsize', ['fontsize']],
                 ['height', ['height']],
                 ['color', ['color']],
                 ['para', ['paragraph']],
                 ['table', ['table']],
-                ['insert', ['link']],
-                ['view', ['fullscreen', 'help']]
+                ['insert', ['link']]
             ]
         });
     });
@@ -774,15 +770,14 @@ function initializeContactUsSummernote() {
     $('#ngoMemberInfoEn, #ngoMemberInfoBn').summernote({
         height: 200,
         toolbar: [
-            ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear', 'strikethrough']],
+            ['view', ['fullscreen', 'help']],
+            ['font', ['bold', 'italic', 'underline', 'clear', 'strikethrough']],
             ['fontsize', ['fontsize']],
             ['height', ['height']],
             ['color', ['color']],
             ['para', ['paragraph']],
             ['table', ['table']],
-            ['insert', ['link']],
-            ['view', ['fullscreen', 'help']]
+            ['insert', ['link']]
         ]
     });
 }

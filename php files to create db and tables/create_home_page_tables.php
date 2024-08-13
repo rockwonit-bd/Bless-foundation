@@ -29,7 +29,7 @@ if ($conn->query($sql) === TRUE) {
 
 // Create latest_developments table
 $sql = "CREATE TABLE IF NOT EXISTS latest_developments (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     headline VARCHAR(255) NOT NULL,
     link VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

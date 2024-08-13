@@ -9,6 +9,7 @@ body {
 /*Editor*/
 .note-editable {
     background-color: #2C3E50 !important;
+    caret-color: white;
 }
 
 .note-toolbar{

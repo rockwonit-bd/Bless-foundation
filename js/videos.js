@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    document.getElementById('languageSelect').value = savedLanguage;
     fetch('video_operations.php')
         .then(response => response.json())
         .then(data => {
@@ -15,8 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                 allowfullscreen>
                         </iframe>
-                        <h3>${video.title}</h3>
-                        <p>${video.description}</p>
                     `;
                     videosGrid.appendChild(videoContainer);
                 });

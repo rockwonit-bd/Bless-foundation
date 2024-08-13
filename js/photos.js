@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    document.getElementById('languageSelect').value = savedLanguage;
     const photoContainer = document.getElementById("photo-container");
     const popup = document.querySelector(".img-popup");
     const popupImage = popup.querySelector("img");

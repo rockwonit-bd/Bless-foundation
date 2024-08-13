@@ -38,14 +38,13 @@ try {
     $contribution = $conn->real_escape_string($_POST['contribution']);
     $hobbies = $conn->real_escape_string($_POST['hobbies']);
 
-    // File upload function
+    // File upload function with unique name generation
     function uploadFile($file, $uploadDir) {
         if (!isset($file['tmp_name']) || !is_uploaded_file($file['tmp_name'])) {
             throw new Exception("No file uploaded or upload failed.");
         }
 
-        $targetFile = $uploadDir . basename($file["name"]);
-        $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+        $imageFileType = strtolower(pathinfo($file["name"], PATHINFO_EXTENSION));
 
         // Check file size (2MB limit)
         if ($file["size"] > 2000000) {
@@ -56,6 +55,10 @@ try {
         if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
             throw new Exception("Only JPG, JPEG, PNG files are allowed.");
         }
+
+        // Generate a unique filename
+        $uniqueName = uniqid() . '_' . bin2hex(random_bytes(8)) . '.' . $imageFileType;
+        $targetFile = $uploadDir . $uniqueName;
 
         if (move_uploaded_file($file["tmp_name"], $targetFile)) {
             return $targetFile;
